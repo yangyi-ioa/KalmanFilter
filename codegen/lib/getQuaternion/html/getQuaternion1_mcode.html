@@ -1,0 +1,23 @@
+<!-- saved from url=(0014)about:internet -->
+<html>
+<body>
+<script src="resources/eml_report_loadable_data.js"></script>
+<pre class="code">
+<span class="srcline"><span class="lineno"><a href="1,1" id="srcline1"> 1</a></span><span class="line"><span class="keyword">function</span> [<span class="var type1" id="S2T1U3">q</span>] = getQuaternion(<span class="var type1" id="S3T2U6">w_x</span>, <span class="var type1" id="S4T2U7">w_y</span>, <span class="var type1" id="S5T2U8">w_z</span>, <span class="var type1" id="S6T2U9">dt</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="1,2" id="srcline2"> 2</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,3" id="srcline3"> 3</a></span><span class="line">    <span class="keyword">persistent</span> <span class="var type1" id="S7T1U11">q_last</span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,4" id="srcline4"> 4</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="1,5" id="srcline5"> 5</a></span><span class="line">    <span class="keyword">if</span>(<span class="mxinfo " id="T3:U7">isempty(<span class="var type0" id="S7T0U17">q_last</span>)</span>)</span></span>
+<span class="srcline"><span class="lineno"><a href="1,6" id="srcline6"> 6</a></span><span class="line">       <span class="mxinfo " id="T1:U8"><span class="var type1" id="S7T1U20">q_last</span> = <span class="mxinfo " id="T1:U10">[<span class="mxinfo " id="T2:U11">1</span> <span class="mxinfo " id="T2:U12">0</span> <span class="mxinfo " id="T2:U13">0</span> <span class="mxinfo " id="T2:U14">0</span>]</span></span>; </span></span>
+<span class="srcline"><span class="lineno"><a href="1,7" id="srcline7"> 7</a></span><span class="line">    <span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,8" id="srcline8"> 8</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,9" id="srcline9"> 9</a></span><span class="line">    <span class="mxinfo " id="T1:U15"><span class="var type1" id="S2T1U29">q</span> = <span class="mxinfo " id="T1:U17"><span class="var type1" id="S7T1U31">q_last</span> + <span class="mxinfo " id="T1:U19"><span class="var type1" id="S6T2U33">dt</span>.*(<span class="mxinfo " id="T1:U21"><span class="mxinfo " id="T2:U22"><span class="mxinfo " id="T2:U23">1</span>/<span class="mxinfo " id="T2:U24">2</span></span>.*<span class="mxinfo " id="T1:U25">quatmultiply(<span class="var type1" id="S7T1U41">q_last</span>,<span class="mxinfo " id="T1:U27">[<span class="mxinfo " id="T2:U28">0</span>, <span class="var type1" id="S3T2U45">w_x</span>, <span class="var type1" id="S4T2U46">w_y</span>, <span class="var type1" id="S5T2U47">w_z</span>]</span>)</span></span>)</span></span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,10" id="srcline10">10</a></span><span class="line">    <span class="mxinfo " id="T1:U32"><span class="var type1" id="S2T1U50">q</span> = <span class="mxinfo " id="T1:U34">quatnormalize(<span class="var type1" id="S2T1U53">q</span>)</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,11" id="srcline11">11</a></span><span class="line">    </span></span>
+<span class="srcline"><span class="lineno"><a href="1,12" id="srcline12">12</a></span><span class="line">    <span class="mxinfo " id="T1:U36"><span class="var type1" id="S7T1U56">q_last</span> = <span class="var type1" id="S2T1U57">q</span></span>;</span></span>
+<span class="srcline"><span class="lineno"><a href="1,13" id="srcline13">13</a></span><span class="line"></span></span>
+<span class="srcline"><span class="lineno"><a href="1,14" id="srcline14">14</a></span><span class="line"><span class="keyword">end</span></span></span>
+<span class="srcline"><span class="lineno"><a href="1,15" id="srcline15">15</a></span><span class="line"></span></span>
+</pre>
+</body>
+</html>
